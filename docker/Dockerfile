@@ -12,6 +12,7 @@
 FROM registry.access.redhat.com/ubi8/openjdk-17:1.15-1.1682053058 AS builder
 
 # Build dependency offline to streamline build
+USER root
 RUN mkdir -p /home/jboss/project
 WORKDIR /home/jboss/project
 COPY pom.xml .
